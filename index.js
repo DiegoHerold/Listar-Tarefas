@@ -20,7 +20,7 @@ app.use('/static', express.static('public'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(session({secret:'i1n2f3o4'})); // uso de sessões
 // começo de rotas
-app.get('/', (req, res)=>{res.send("<h1>API Tarefas</h1>")});
+app.get('/', (req, res)=>{	res.redirect('/login');});
 
 app.use(express.urlencoded({ extended: true }));
 
